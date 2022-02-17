@@ -54,17 +54,22 @@ public class PetShop {
         System.out.println("Please enter the name of the animal you would like to purchase?");
         String userInput = nameScanner.nextLine();
 
-        if(userInput==firstCat.getName()){
-            System.out.println("Valid Choice.");
+        if(userInput.equals(firstCat.getName()) || userInput.equals(secondCat.getName()) ||
+                userInput.equals(firstDog.getName()) || userInput.equals(secondDog.getName())){
+            System.out.println("Valid choice.");
+
         }
+        else {
+            System.out.println("Not a valid choice.");
 
-        System.out.println("We have the following animals available: ");
-        System.out.println( "CATS - " + firstCat.getName() + " Age: " +
-                firstCat.getAge() + " Color: " + firstCat.getColor()  +  secondCat.getName() + " Age: " +
-                secondCat.getAge() + " Color: " +secondCat.getColor());
-        System.out.println ("DOGS - " + firstDog.getName() + " Age: " +
-                firstDog.getAge() + " Color: " + firstDog.getColor()  +  secondDog.getName() + " Age: " +
-                secondDog.getAge() + " Color: " +secondDog.getColor());
 
+            System.out.println("We have the following animals available: ");
+            System.out.println("CATS - " + firstCat.getName() + " Age: " +
+                    firstCat.getAge() + " Color: " + firstCat.getColor() + secondCat.getName() + " Age: " +
+                    secondCat.getAge() + " Color: " + secondCat.getColor());
+            System.out.println("DOGS - " + firstDog.getName() + " Age: " +
+                    firstDog.getAge() + " Color: " + firstDog.getColor() + secondDog.getName() + " Age: " +
+                    secondDog.getAge() + " Color: " + secondDog.getColor());
+        }
     }
 }
